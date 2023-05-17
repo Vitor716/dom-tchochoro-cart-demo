@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { ProductSelectedComponent } from './all-products/product-selected/product-selected.component';
 import { CartComponent } from './cart/cart.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: AllProductsComponent},
+  {path: 'productSelected', component: ProductSelectedComponent },
+  {path: 'cart', component: CartComponent}
+] 
 
 @NgModule({
   declarations: [
@@ -18,7 +25,8 @@ import { CartComponent } from './cart/cart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
