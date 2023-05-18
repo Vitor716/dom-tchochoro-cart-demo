@@ -8,6 +8,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
 import { ProductSelectedComponent } from './all-products/product-selected/product-selected.component';
 import { CartComponent } from './cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductService } from './shared/product.service';
 
 const appRoutes: Routes = [
   {path: '', component: AllProductsComponent},
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

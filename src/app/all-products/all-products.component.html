@@ -1,1 +1,13 @@
-<p>all-products works!</p>
+<div class="conteiner">
+    <div class="row">
+        <div class="card" style="width: 18rem;" *ngFor="let productEl of products">
+            <img [src]="productEl.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{productEl.name}}</h5>
+              <p class="card-text">{{productEl.description}}</p>
+              <h3 class="card-text">R$ {{productEl.price}}</h3>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
